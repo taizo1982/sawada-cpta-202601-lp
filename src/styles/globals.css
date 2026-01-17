@@ -42,6 +42,7 @@
       --section-padding: clamp(4rem, 10vw, 6rem);
       --container-width: min(1140px, 92vw);
       --container-narrow: min(760px, 92vw);
+      --side-padding: clamp(1rem, 4vw, 1.5rem);
     }
 
     *, *::before, *::after {
@@ -94,7 +95,7 @@
     .header-inner {
       max-width: var(--container-width);
       margin: 0 auto;
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem var(--side-padding);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -346,7 +347,7 @@
       z-index: 1;
       max-width: var(--container-width);
       margin: 0 auto;
-      padding: 2rem 1.5rem 5rem;
+      padding: 2rem var(--side-padding) 5rem;
       width: 100%;
       display: grid;
       gap: 2rem;
@@ -368,12 +369,12 @@
     .hero-vertical-title {
       display: flex;
       align-items: flex-start;
-      gap: 1.5rem;
+      gap: clamp(1rem, 4vw, 1.5rem);
       margin-bottom: 1.25rem;
     }
 
     .hero-vertical-logo {
-      max-width: 120px;
+      max-width: clamp(100px, 28vw, 120px);
       width: auto;
       height: auto;
     }
@@ -625,7 +626,7 @@
 
     /* ===== SECTION BASE ===== */
     .section {
-      padding: var(--section-padding) 1.5rem;
+      padding: var(--section-padding) var(--side-padding);
     }
 
     .section-alt {
@@ -649,7 +650,7 @@
 
     .section-header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: clamp(2rem, 6vw, 3rem);
     }
 
     .section-green .section-label {
@@ -1775,7 +1776,7 @@
     .footer {
       background: var(--blue-900);
       color: white;
-      padding: 3.5rem 1.5rem 1.5rem;
+      padding: 3.5rem var(--side-padding) 1.5rem;
     }
 
     .footer-content {
