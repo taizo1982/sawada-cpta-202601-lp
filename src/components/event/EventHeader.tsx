@@ -30,7 +30,7 @@ export function EventHeader() {
           <picture>
             <source srcSet={sawadaLogoAvif} type="image/avif" />
             <source srcSet={sawadaLogoWebp} type="image/webp" />
-            <img src={sawadaLogoPng} alt="澤田匡央税理士事務所" style={{ height: '36px', width: 'auto' }} />
+            <img src={sawadaLogoPng} alt="澤田匡央税理士事務所" />
           </picture>
         </div>
         <div className="header-actions">

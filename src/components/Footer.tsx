@@ -12,7 +12,7 @@ export function Footer() {
               <picture>
                 <source srcSet={sawadaLogoWhAvif} type="image/avif" />
                 <source srcSet={sawadaLogoWhWebp} type="image/webp" />
-                <img src={sawadaLogoWhPng} alt="澤田匡央税理士事務所" style={{ height: '48px', width: 'auto' }} />
+                <img src={sawadaLogoWhPng} alt="澤田匡央税理士事務所" />
               </picture>
             </div>
             <ul className="footer-details">
