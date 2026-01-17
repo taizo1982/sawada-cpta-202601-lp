@@ -1,0 +1,2633 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>創業計画・融資を見据えた「事前整理」無料個別相談 | 澤田匡央税理士事務所</title>
+  <meta name="description" content="創業は決めた。でも、計画と数字に不安がある方へ。滋賀県近江八幡市の税理士が、創業計画・融資の事前整理を60分無料でサポート。">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Colors - Blue trust palette */
+      --blue-900: #003d66;
+      --blue-800: #005a99;
+      --blue-700: #0073c2;
+      --blue-600: #0080D9;
+      --blue-500: #1a8fe0;
+      --blue-400: #4da6e8;
+      --blue-300: #80bdef;
+      --blue-200: #b3d4f5;
+      --blue-100: #e6f2fc;
+      --blue-50: #f0f7fe;
+
+      /* Neutral */
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      /* Semantic */
+      --primary: var(--blue-800);
+      --primary-light: var(--blue-700);
+      --primary-dark: var(--blue-900);
+      --accent: var(--blue-600);
+      --accent-light: var(--blue-500);
+      --text: #1a1a1a;
+      --text-muted: var(--slate-500);
+      --bg: #ffffff;
+      --bg-alt: var(--slate-50);
+      --border: var(--slate-200);
+
+      /* Typography */
+      --font-sans: 'Zen Kaku Gothic New', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+      --font-heading: 'Noto Sans JP', 'Yu Gothic', 'YuGothic', sans-serif;
+      --font-english: 'Cormorant Garamond', serif;
+
+      /* Spacing */
+      --section-padding: clamp(4rem, 10vw, 6rem);
+      --container-width: min(1140px, 92vw);
+      --container-narrow: min(760px, 92vw);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===== FIXED HEADER ===== */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transform: translateY(-100%);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fixed-header.visible {
+      transform: translateY(0);
+    }
+
+    .header-inner {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .header-logo-vertical {
+      writing-mode: vertical-rl;
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--primary);
+      letter-spacing: 0.15em;
+      line-height: 1.2;
+      border-left: 2px solid var(--blue-600);
+      padding-left: 0.5rem;
+      height: 3rem;
+    }
+
+    .header-logo-name {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .header-tel {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .header-tel:hover {
+      color: var(--primary-light);
+    }
+
+    @media (min-width: 640px) {
+      .header-tel {
+        display: flex;
+      }
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-primary {
+      background: var(--blue-700);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0, 128, 217, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-800);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(0, 128, 217, 0.3);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-300);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-sm {
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8rem;
+    }
+
+    .btn-lg {
+      padding: 1rem 2.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 4vw, 1.875rem);
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-english);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: var(--blue-600);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    @media (min-width: 1024px) {
+      .hero {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 450px;
+      }
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 100% 35%;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-bg img {
+        object-position: -20px center;
+      }
+    }
+
+    .hero-bg::after {
+      display: none;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-bg::after {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 2rem 1.5rem 5rem;
+      width: 100%;
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr 360px;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    .hero-content {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .hero-vertical-title {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-vertical-logo {
+      height: auto;
+      width: 120px;
+      object-fit: contain;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-vertical-logo {
+        width: 100px;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--blue-100);
+      color: var(--blue-800);
+      font-size: 0.8rem;
+      font-weight: 500;
+      border-radius: 3px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-title {
+      font-size: clamp(1.625rem, 4.5vw, 2.25rem);
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 1.875rem;
+        margin-bottom: 0.875rem;
+      }
+    }
+
+    .hero-title .highlight {
+      color: var(--blue-700);
+      background: linear-gradient(transparent 70%, var(--blue-200) 70%);
+      padding: 0 0.125rem;
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--slate-700);
+      margin-bottom: 1.5rem;
+      line-height: 1.9;
+      font-weight: 400;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-lead {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    .hero-concerns {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      background: var(--slate-50);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--slate-200);
+    }
+
+    @media (min-width: 1024px) {
+      .hero-concerns {
+        margin-bottom: 1rem;
+        padding: 0.875rem 1rem;
+      }
+    }
+
+    .hero-concerns li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      color: var(--slate-700);
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    @media (min-width: 1024px) {
+      .hero-concerns li {
+        padding: 0.375rem 0;
+        font-size: 0.85rem;
+      }
+    }
+
+    .hero-concerns li:last-child {
+      border-bottom: none;
+    }
+
+    .hero-concerns .icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      color: var(--blue-600);
+    }
+
+    .hero-message {
+      background: white;
+      border-left: 3px solid var(--blue-600);
+      padding: 1rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--primary);
+      border-radius: 0 4px 4px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      padding: 2rem 1.75rem;
+      animation: fadeInUp 0.8s 0.2s ease both;
+      border: 1px solid var(--slate-200);
+    }
+
+    @media (min-width: 1024px) {
+      .hero-card {
+        padding: 1.5rem 1.5rem;
+      }
+    }
+
+    .hero-card-header {
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--slate-200);
+      margin-bottom: 1rem;
+    }
+
+    .hero-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      color: var(--primary);
+      margin-bottom: 0.375rem;
+      font-weight: 500;
+    }
+
+    .hero-card-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-features {
+      list-style: none;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-card-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.625rem 0;
+      font-size: 0.9rem;
+      border-bottom: 1px dashed var(--slate-200);
+    }
+
+    .hero-card-features li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-label {
+      color: var(--text-muted);
+      min-width: 80px;
+      font-size: 0.8rem;
+    }
+
+    .feature-value {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .feature-value.free {
+      color: var(--blue-700);
+      font-size: 1.05rem;
+    }
+
+    .hero-card .btn {
+      width: 100%;
+      margin-bottom: 0.875rem;
+    }
+
+    .hero-card-tel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      padding: 1rem;
+      background: var(--slate-50);
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .hero-card-tel:hover {
+      background: var(--slate-100);
+    }
+
+    .hero-card-tel .tel-number {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: var(--primary);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    /* Trust badges */
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      margin-top: 0.75rem;
+      animation: fadeInUp 0.8s 0.4s ease both;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .trust-badge .icon {
+      width: 16px;
+      height: 16px;
+      color: var(--blue-600);
+    }
+
+    /* ===== SECTION BASE ===== */
+    .section {
+      padding: var(--section-padding) 1.5rem;
+    }
+
+    .section-alt {
+      background: var(--bg-alt);
+    }
+
+    .section-green {
+      background: var(--blue-800);
+      color: white;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .container-narrow {
+      max-width: var(--container-narrow);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-green .section-label {
+      color: var(--blue-300);
+    }
+
+    .section-green .section-title {
+      color: white;
+    }
+
+    /* ===== TARGET SECTION ===== */
+    .target-grid {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .target-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .target-image {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .target-image img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .target-content {
+      order: -1;
+    }
+
+    @media (min-width: 1024px) {
+      .target-content {
+        order: 0;
+      }
+    }
+
+    .target-list {
+      list-style: none;
+      margin-bottom: 1.75rem;
+    }
+
+    .target-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .target-list li:last-child {
+      border-bottom: none;
+    }
+
+    .target-list .check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--blue-700);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .target-list .check svg {
+      width: 12px;
+      height: 12px;
+      color: white;
+    }
+
+    .target-list span {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .target-message {
+      font-size: 0.95rem;
+      color: var(--slate-700);
+      padding: 1.25rem 1.5rem;
+      background: white;
+      border-radius: 6px;
+      border-left: 3px solid var(--blue-600);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      line-height: 1.8;
+    }
+
+    /* ===== CONCERNS SECTION ===== */
+    .concerns-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .concerns-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .concern-card {
+      background: white;
+      border-radius: 6px;
+      padding: 1.5rem;
+      border: 1px solid var(--slate-200);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .concern-card:hover {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .concern-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--blue-100);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-700);
+    }
+
+    .concern-text {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .concerns-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-top: 1.25rem;
+      border-top: 1px dashed var(--slate-300);
+    }
+
+    /* ===== SERVICE SECTION ===== */
+    .service-hero {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-hero img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      .service-hero img {
+        height: 360px;
+      }
+    }
+
+    .service-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13, 40, 24, 0.9) 0%, rgba(13, 40, 24, 0.4) 50%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+    }
+
+    .service-hero-text {
+      color: white;
+    }
+
+    .service-hero-text h3 {
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      margin-bottom: 0.375rem;
+      font-weight: 500;
+    }
+
+    .service-hero-text p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .service-hero-text .emphasis {
+      color: var(--blue-300);
+    }
+
+    .service-list {
+      list-style: none;
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: white;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--slate-200);
+      transition: all 0.2s ease;
+    }
+
+    .service-list li:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-list .number {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--blue-700);
+      color: white;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .service-list .text {
+      font-size: 0.95rem;
+      color: var(--text);
+      padding-top: 0.25rem;
+    }
+
+    .service-promise {
+      background: var(--blue-800);
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 640px;
+      margin: 0 auto;
+      color: white;
+    }
+
+    .service-promise h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-weight: 500;
+    }
+
+    .service-promise h4 svg {
+      color: var(--blue-300);
+    }
+
+    .service-promise ul {
+      list-style: none;
+    }
+
+    .service-promise li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
+
+    .service-promise .icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: var(--blue-400);
+      margin-top: 2px;
+    }
+
+    /* ===== CTA INLINE ===== */
+    .cta-inline {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--slate-200);
+      margin-top: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .cta-inline .btn {
+      margin-bottom: 1rem;
+    }
+
+    .cta-inline-info {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .cta-inline-info span {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .cta-inline-info span::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--blue-600);
+      border-radius: 50%;
+    }
+
+    /* ===== REASON SECTION ===== */
+    .reason-visual {
+      display: grid;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .reason-visual {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+      }
+    }
+
+    .reason-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.75rem;
+      text-align: center;
+      border: 1px solid var(--slate-200);
+    }
+
+    .reason-card.problem {
+      border-color: #fca5a5;
+      background: #fef2f2;
+    }
+
+    .reason-card.arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      padding: 0.75rem;
+    }
+
+    .reason-card.arrow svg {
+      transform: rotate(90deg);
+      color: var(--slate-400);
+      width: 28px;
+      height: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .reason-card.arrow svg {
+        transform: rotate(0);
+      }
+    }
+
+    .reason-card.solution {
+      border-color: var(--blue-400);
+      background: var(--blue-50);
+    }
+
+    .reason-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.04);
+      border-radius: 50%;
+    }
+
+    .reason-card.problem .reason-icon {
+      color: #dc2626;
+      background: rgba(220, 38, 38, 0.1);
+    }
+
+    .reason-card.solution .reason-icon {
+      color: var(--blue-700);
+      background: var(--blue-200);
+    }
+
+    .reason-card h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .reason-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .reason-description {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .reason-problems {
+      list-style: none;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      background: white;
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .reason-problems li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      padding: 0.625rem 0;
+      font-size: 0.9rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--slate-100);
+    }
+
+    .reason-problems li:last-child {
+      border-bottom: none;
+    }
+
+    .reason-problems .icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: #dc2626;
+      margin-top: 2px;
+    }
+
+    .reason-conclusion {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text);
+      padding: 1.5rem 2rem;
+      background: white;
+      border-radius: 6px;
+      border-left: 3px solid var(--blue-600);
+      max-width: 640px;
+      margin: 0 auto;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      line-height: 1.8;
+    }
+
+    .reason-conclusion strong {
+      color: var(--blue-700);
+    }
+
+    /* ===== BENEFITS SECTION ===== */
+    .benefits-grid {
+      display: grid;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    .benefits-image {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefits-image img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
+
+    .benefits-image-badge {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      background: white;
+      padding: 0.875rem 1.25rem;
+      border-radius: 6px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .benefits-image-badge span {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.125rem;
+    }
+
+    .benefits-image-badge strong {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .benefits-list {
+      list-style: none;
+    }
+
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .benefits-list li:last-child {
+      border-bottom: none;
+    }
+
+    .benefits-list .icon-wrap {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: var(--blue-700);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .benefits-list .icon-wrap svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+
+    .benefits-list .text {
+      font-size: 0.95rem;
+      color: var(--text);
+      padding-top: 0.5rem;
+    }
+
+    .benefits-message {
+      font-size: 0.95rem;
+      color: var(--text);
+      padding: 1.5rem;
+      background: var(--slate-50);
+      border-radius: 6px;
+      border-left: 3px solid var(--blue-600);
+      margin-top: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .benefits-message .emphasis {
+      color: var(--blue-700);
+      font-weight: 500;
+    }
+
+    /* ===== PROFILE SECTION ===== */
+    .profile-wrapper {
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .profile-wrapper {
+        grid-template-columns: 360px 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    .profile-image-col {
+      position: relative;
+    }
+
+    .profile-main-image {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+      position: relative;
+    }
+
+    .profile-main-image img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .profile-name-card {
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 1.25rem 2rem;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+      min-width: 260px;
+    }
+
+    .profile-name-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.125rem;
+      font-weight: 500;
+    }
+
+    .profile-name-card .reading {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.375rem;
+    }
+
+    .profile-name-card .title {
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+
+    .profile-content {
+      padding-top: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .profile-content {
+        padding-top: 0;
+      }
+    }
+
+    .profile-greeting h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-weight: 500;
+    }
+
+    .profile-greeting h4::before {
+      content: '';
+      width: 3px;
+      height: 20px;
+      background: var(--blue-600);
+      border-radius: 2px;
+    }
+
+    .profile-greeting p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.9;
+      margin-bottom: 1rem;
+    }
+
+    .profile-philosophy {
+      background: var(--slate-50);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border: 1px solid var(--slate-200);
+    }
+
+    .profile-philosophy h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .profile-philosophy h4 svg {
+      color: var(--blue-600);
+    }
+
+    .profile-philosophy p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .profile-values h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 0.875rem;
+      font-weight: 500;
+    }
+
+    .profile-values ul {
+      list-style: none;
+    }
+
+    .profile-values li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .profile-values .icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: var(--blue-600);
+      margin-top: 2px;
+    }
+
+    .profile-values .highlight-text {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      padding: 0.875rem 1rem;
+      background: rgba(0, 128, 217, 0.08);
+      border-radius: 4px;
+      border-left: 3px solid var(--blue-600);
+    }
+
+    /* ===== FLOW SECTION ===== */
+    .flow-list {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .flow-list::before {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 48px;
+      bottom: 48px;
+      width: 2px;
+      background: var(--blue-300);
+    }
+
+    @media (max-width: 639px) {
+      .flow-list::before {
+        left: 21px;
+      }
+    }
+
+    .flow-item {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+
+    @media (max-width: 639px) {
+      .flow-item {
+        gap: 1rem;
+      }
+    }
+
+    .flow-number {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: var(--blue-700);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-english);
+      font-size: 1.25rem;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 639px) {
+      .flow-number {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+      }
+    }
+
+    .flow-content {
+      flex: 1;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--slate-200);
+    }
+
+    .flow-content h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 0.375rem;
+    }
+
+    .flow-content p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== OVERVIEW SECTION ===== */
+    .overview-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--slate-200);
+    }
+
+    .overview-header {
+      background: var(--blue-800);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .overview-header h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    .overview-header p {
+      opacity: 0.85;
+      font-size: 0.85rem;
+    }
+
+    .overview-body {
+      padding: 1.5rem;
+    }
+
+    .overview-table {
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-row {
+      display: flex;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .overview-row:last-child {
+      border-bottom: none;
+    }
+
+    .overview-label {
+      flex-shrink: 0;
+      width: 100px;
+      padding: 1rem 0.875rem;
+      background: var(--slate-50);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .overview-value {
+      flex: 1;
+      padding: 1rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+    }
+
+    .overview-value.highlight {
+      color: var(--blue-700);
+      font-weight: 600;
+    }
+
+    .overview-notes {
+      list-style: none;
+      background: var(--slate-50);
+      border-radius: 6px;
+      padding: 1.25rem;
+    }
+
+    .overview-notes li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      padding: 0.375rem 0;
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+
+    .overview-notes .icon {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      color: var(--blue-600);
+      margin-top: 1px;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--slate-200);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: background 0.2s;
+      font-family: var(--font-sans);
+    }
+
+    .faq-question:hover {
+      background: var(--slate-50);
+    }
+
+    .faq-question .q-mark {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--blue-700);
+      color: white;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .faq-question .icon {
+      margin-left: auto;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--slate-400);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-question .icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem 4rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.8;
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* ===== FINAL CTA SECTION ===== */
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .final-cta-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .final-cta-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 61, 102, 0.92);
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+    }
+
+    .final-cta .section-title {
+      color: white;
+    }
+
+    .final-cta-message {
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      line-height: 2;
+      opacity: 0.95;
+      margin-bottom: 2rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta-message .emphasis {
+      color: var(--blue-300);
+    }
+
+    .final-cta-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2.5rem 2rem;
+      max-width: 440px;
+      margin: 0 auto;
+      color: var(--text);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+    }
+
+    .final-cta-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .final-cta-card .btn {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .final-cta-card .cta-inline-info {
+      margin-bottom: 1.25rem;
+    }
+
+    .final-cta-tel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 1rem;
+      background: var(--slate-50);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .final-cta-tel:hover {
+      background: var(--slate-100);
+    }
+
+    .final-cta-tel .label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .final-cta-tel .number {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .final-cta-tel .hours {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--blue-900);
+      color: white;
+      padding: 3.5rem 1.5rem 1.5rem;
+    }
+
+    .footer-content {
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .footer-main {
+      display: grid;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo-vertical {
+      writing-mode: vertical-rl;
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      line-height: 1.3;
+      border-left: 2px solid var(--blue-500);
+      padding-left: 0.5rem;
+      height: 3.5rem;
+      opacity: 0.9;
+    }
+
+    .footer-logo-name {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-details {
+      list-style: none;
+    }
+
+    .footer-details li {
+      display: flex;
+      gap: 1rem;
+      padding: 0.625rem 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-details li:last-child {
+      border-bottom: none;
+    }
+
+    .footer-details .label {
+      flex-shrink: 0;
+      width: 72px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.8rem;
+    }
+
+    .footer-details .value {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .footer-details .value a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-details .value a[href^="tel:"] {
+      font-size: 1.25rem;
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-details .value a:hover {
+      color: var(--blue-300);
+    }
+
+    .footer-map {
+      border-radius: 6px;
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .footer-map iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ===== MOBILE FIXED CTA ===== */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: white;
+      padding: 0.875rem 1rem;
+      border-top: 1px solid var(--slate-200);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 1023px) {
+      .mobile-cta {
+        display: flex;
+        gap: 0.625rem;
+      }
+    }
+
+    .mobile-cta .btn-primary {
+      flex: 1;
+    }
+
+    .mobile-cta .btn-secondary {
+      flex-shrink: 0;
+      padding: 0.875rem;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== UTILITIES ===== */
+    .text-center { text-align: center; }
+
+    /* Mobile spacing adjustment */
+    @media (max-width: 1023px) {
+      body {
+        padding-bottom: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header class="fixed-header" id="fixedHeader">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="sawada-logo.png" alt="澤田匡央税理士事務所" style="height: 36px; width: auto;">
+      </div>
+      <div class="header-actions">
+        <a href="tel:0748-36-2817" class="header-tel">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>0748-36-2817</span>
+        </a>
+        <a href="#form" class="btn btn-primary btn-sm">無料相談を申し込む</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="hero-consultation.png" alt="相談風景">
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-vertical-title">
+          <img src="hero-logo.png" alt="澤田匡央税理士事務所" class="hero-vertical-logo">
+        </div>
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+          創業無料相談（予約制）
+        </div>
+        <h1 class="hero-title">
+          創業計画・融資を見据えた<br>
+          <span class="highlight">「事前整理」</span>無料個別相談
+        </h1>
+        <p class="hero-lead">
+          事業は決めた。<br>
+          でも、計画と数字に不安がある方へ。
+        </p>
+        <ul class="hero-concerns">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            創業は決めたが、この考えで進んでいいのか誰かに聞きたい
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            創業計画を立てたいが、進め方に迷っている
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            融資を検討しているが、数字に自信がない
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            金融機関にどう見られるのかが不安
+          </li>
+        </ul>
+        <p class="hero-message">
+          その状態のままで、ご相談ください。
+        </p>
+
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            無理な勧誘は一切ありません
+          </div>
+          <div class="trust-badge">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            守秘義務により厳重管理
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <h2 class="hero-card-title">創業無料相談</h2>
+          <p class="hero-card-subtitle">初回60分・代表税理士が直接対応</p>
+        </div>
+        <ul class="hero-card-features">
+          <li>
+            <span class="feature-label">相談時間</span>
+            <span class="feature-value">60分</span>
+          </li>
+          <li>
+            <span class="feature-label">相談費用</span>
+            <span class="feature-value free">無料</span>
+          </li>
+          <li>
+            <span class="feature-label">相談形式</span>
+            <span class="feature-value">来所・個別相談</span>
+          </li>
+          <li>
+            <span class="feature-label">担当</span>
+            <span class="feature-value">代表税理士 澤田</span>
+          </li>
+        </ul>
+        <a href="#form" class="btn btn-primary btn-lg">無料相談を申し込む</a>
+        <a href="tel:0748-36-2817" class="hero-card-tel">
+          <span>お電話でのご予約</span>
+          <span class="tel-number">0748-36-2817</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Section -->
+  <section class="section" id="target">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">For You</span>
+        <h2 class="section-title">このような方のための相談です</h2>
+      </div>
+      <div class="target-grid">
+        <div class="target-image animate-on-scroll">
+          <img src="entrepreneur-planning.jpg" alt="創業を考えている方">
+        </div>
+        <div class="target-content animate-on-scroll">
+          <ul class="target-list">
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>創業することはすでに決めている</span>
+            </li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>創業計画書をこれから作成しようとしている</span>
+            </li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>日本政策金融公庫や金融機関への融資を視野に入れている</span>
+            </li>
+            <li>
+              <span class="check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>計画や数字について「このままで大丈夫か」不安がある</span>
+            </li>
+          </ul>
+          <div class="target-message">
+            「やる覚悟はあるが、設計図がまだ整っていない」<br>
+            そんな方に向けた無料相談です。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concerns Section -->
+  <section class="section section-alt" id="concerns">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Common Concerns</span>
+        <h2 class="section-title">よくあるお悩み</h2>
+      </div>
+      <div class="concerns-grid animate-on-scroll">
+        <div class="concern-card">
+          <div class="concern-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <p class="concern-text">創業計画書に何を書けばよいのか分からない</p>
+        </div>
+        <div class="concern-card">
+          <div class="concern-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <p class="concern-text">売上や経費の数字をどう考えればよいか不安</p>
+        </div>
+        <div class="concern-card">
+          <div class="concern-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <p class="concern-text">融資で見られるポイントが分からない</p>
+        </div>
+        <div class="concern-card">
+          <div class="concern-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <p class="concern-text">計画を出してからダメ出しされないか心配</p>
+        </div>
+      </div>
+      <p class="concerns-note animate-on-scroll">この相談では、いきなり作成や結論を求めることはありません。</p>
+    </div>
+  </section>
+
+  <!-- Service Section -->
+  <section class="section" id="service">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">この無料相談で行うこと</h2>
+        <p class="section-subtitle">60分間の相談内容</p>
+      </div>
+
+      <div class="service-hero animate-on-scroll">
+        <!-- service-image.jpg：明るい会議室での打ち合わせシーン -->
+        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=1200&q=80" alt="相談の様子">
+        <div class="service-hero-overlay">
+          <div class="service-hero-text">
+            <h3>本相談は、<span class="emphasis">「事前整理」</span>に特化しています</h3>
+            <p>創業計画を作る前に、考えを整理するための時間です</p>
+          </div>
+        </div>
+      </div>
+
+      <ul class="service-list animate-on-scroll">
+        <li>
+          <span class="number">1</span>
+          <span class="text">現在考えている事業内容の整理</span>
+        </li>
+        <li>
+          <span class="number">2</span>
+          <span class="text">創業計画全体の考え方の確認</span>
+        </li>
+        <li>
+          <span class="number">3</span>
+          <span class="text">売上・経費・生活費など数字の整理</span>
+        </li>
+        <li>
+          <span class="number">4</span>
+          <span class="text">融資を見据えた際の注意点の共有</span>
+        </li>
+        <li>
+          <span class="number">5</span>
+          <span class="text">今後の進め方（次の一歩）の明確化</span>
+        </li>
+      </ul>
+
+      <div class="service-promise animate-on-scroll">
+        <h4>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          安心して話せるための約束
+        </h4>
+        <ul>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>正解を押し付けることはありません</span>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>否定せず、現実的な視点で整理します</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cta-inline animate-on-scroll">
+        <a href="#form" class="btn btn-primary btn-lg">無料相談を申し込む</a>
+        <div class="cta-inline-info">
+          <span>予約制</span>
+          <span>来所</span>
+          <span>60分</span>
+          <span>無料</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reason Section -->
+  <section class="section section-alt" id="reason">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Why Important</span>
+        <h2 class="section-title">なぜ「事前整理」が重要なのか</h2>
+      </div>
+
+      <div class="reason-visual animate-on-scroll">
+        <div class="reason-card problem">
+          <div class="reason-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+          </div>
+          <h4>準備不足のまま進める</h4>
+          <p>数字があいまい、計画に一貫性がない状態で提出</p>
+        </div>
+        <div class="reason-card arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="reason-card solution">
+          <div class="reason-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h4>事前に整理してから進める</h4>
+          <p>一度整理することが、最短ルートになる場合も</p>
+        </div>
+      </div>
+
+      <p class="reason-description animate-on-scroll">創業計画や融資は、提出・相談後の修正が難しいケースが多いのが実情です。</p>
+
+      <div class="reason-problems animate-on-scroll">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+          <span>数字の前提があいまい</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+          <span>計画に一貫性がない</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+          <span>金融機関目線が不足している</span>
+        </li>
+      </div>
+
+      <div class="reason-conclusion animate-on-scroll">
+        こうした状態で進めると、結果的に時間や労力が余分にかかることがあります。<br>
+        <strong>進める前に一度整理すること</strong>が、最短ルートになる場合もあります。
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section" id="benefits">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Benefits</span>
+        <h2 class="section-title">税理士に相談するメリット</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefits-image animate-on-scroll">
+          <img src="expert-explanation.jpg" alt="税理士との相談">
+          <div class="benefits-image-badge">
+            <span>創業支援</span>
+            <strong>専門家の視点でサポート</strong>
+          </div>
+        </div>
+        <div class="benefits-content animate-on-scroll">
+          <ul class="benefits-list">
+            <li>
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <span class="text">創業時の税務・数字を前提に整理できる</span>
+            </li>
+            <li>
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+              </div>
+              <span class="text">融資を見据えた現実的な視点が得られる</span>
+            </li>
+            <li>
+              <div class="icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <span class="text">後から修正しづらい判断を事前に防げる</span>
+            </li>
+          </ul>
+
+          <div class="benefits-message">
+            創業準備段階だからこそ、<span class="emphasis">「整えてから進む」</span>という選択肢があります。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Section -->
+  <section class="section section-alt" id="profile">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Advisor</span>
+        <h2 class="section-title">担当者紹介</h2>
+        <p class="section-subtitle">初回の無料相談を担当いたします</p>
+      </div>
+
+      <div class="profile-wrapper">
+        <div class="profile-image-col animate-on-scroll">
+          <div class="profile-main-image">
+            <img src="sawada-profile.jpg" alt="澤田匡央税理士">
+          </div>
+          <div class="profile-name-card">
+            <h3>澤田 匡央</h3>
+            <p class="reading">さわだ ただちか</p>
+            <p class="title">澤田匡央税理士事務所 代表</p>
+          </div>
+        </div>
+
+        <div class="profile-content animate-on-scroll">
+          <div class="profile-greeting">
+            <h4>ごあいさつ</h4>
+            <p>はじめまして。澤田匡央（さわだ ただちか）と申します。</p>
+            <p>私は、滋賀県生まれ・滋賀県育ちの税理士です。滋賀県内で、企業・個人事業主の方など、さまざまなお悩みに向き合ってきました。</p>
+          </div>
+
+          <div class="profile-philosophy">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              「お客様のとなりにいる税理士」でありたい
+            </h4>
+            <p>税理士は「先生」と呼ばれることが多い仕事ですが、上から目線で指導するような関わり方ではなく、同じ目線で、気軽に相談できる存在でありたいと考えています。</p>
+            <p style="margin-top: 0.75rem;">税務だけでなく、経営のこと／お金のこと／将来の不安／まだ言葉になっていない悩みも含めて、安心してお話しください。</p>
+          </div>
+
+          <div class="profile-values">
+            <h4>創業相談で大切にしていること</h4>
+            <ul>
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>まだ計画が固まっていなくても構いません</span>
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>数字に自信がなくても問題ありません</span>
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>「こんなことを聞いていいのか」と思う必要はありません</span>
+              </li>
+            </ul>
+            <p class="highlight-text">その状態こそ、相談に最も適したタイミングです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flow Section -->
+  <section class="section" id="flow">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Flow</span>
+        <h2 class="section-title">無料相談の流れ</h2>
+      </div>
+
+      <div class="flow-list animate-on-scroll">
+        <div class="flow-item">
+          <div class="flow-number">1</div>
+          <div class="flow-content">
+            <h4>相談フォームよりお申し込み</h4>
+            <p>下記フォームより必要事項をご入力ください。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-number">2</div>
+          <div class="flow-content">
+            <h4>当事務所より日程調整のご連絡</h4>
+            <p>内容確認後、メールにてご連絡いたします。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-number">3</div>
+          <div class="flow-content">
+            <h4>相談日程の確定</h4>
+            <p>双方の都合を調整し、相談日時を決定します。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-number">4</div>
+          <div class="flow-content">
+            <h4>当日ご来所・個別相談（60分）</h4>
+            <p>ご予約日時に事務所へお越しください。代表税理士が直接対応いたします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="section section-alt" id="overview">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Overview</span>
+        <h2 class="section-title">相談概要</h2>
+      </div>
+
+      <div class="overview-card animate-on-scroll">
+        <div class="overview-header">
+          <h3>創業無料相談</h3>
+          <p>お気軽にご相談ください</p>
+        </div>
+        <div class="overview-body">
+          <div class="overview-table">
+            <div class="overview-row">
+              <div class="overview-label">相談時間</div>
+              <div class="overview-value">60分</div>
+            </div>
+            <div class="overview-row">
+              <div class="overview-label">相談形式</div>
+              <div class="overview-value">個別相談（予約制・来所）</div>
+            </div>
+            <div class="overview-row">
+              <div class="overview-label">相談費用</div>
+              <div class="overview-value highlight">無料</div>
+            </div>
+            <div class="overview-row">
+              <div class="overview-label">対象</div>
+              <div class="overview-value">創業を検討中の方</div>
+            </div>
+          </div>
+
+          <ul class="overview-notes">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>本相談は、情報整理・判断材料の提供を目的としています。</span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>その場での契約や、無理な勧誘、営業活動は一切ありません。</span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>ご相談内容は税理士の守秘義務により厳重に管理いたします。</span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>初回相談はすべて代表税理士が直接対応いたします。</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">よくあるご質問</h2>
+      </div>
+
+      <div class="faq-list animate-on-scroll">
+        <div class="faq-item open">
+          <button class="faq-question">
+            <span class="q-mark">Q</span>
+            <span>創業計画書が全くできていなくても相談できますか？</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            はい。計画を作る前の整理相談ですので問題ありません。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="q-mark">Q</span>
+            <span>融資を受けるかどうか決めていなくても大丈夫ですか？</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            可能です。融資を視野に入れた場合の考え方を整理します。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="q-mark">Q</span>
+            <span>相談だけで終わっても問題ありませんか？</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            はい。相談のみで終了される方もいらっしゃいます。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section final-cta" id="final-cta">
+    <div class="final-cta-bg">
+      <img src="office-interior.jpg" alt="オフィス">
+    </div>
+    <div class="container">
+      <div class="final-cta-content">
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">最後に</h2>
+        </div>
+
+        <p class="final-cta-message animate-on-scroll">
+          創業計画や融資は、<span class="emphasis">「勢い」よりも「整理」</span>が重要です。<br><br>
+          創業は決めた。でも、この考えで進んでいいのか不安。<br>
+          その段階こそ、相談に最も適したタイミングです。
+        </p>
+
+        <div class="final-cta-card animate-on-scroll" id="form">
+          <h3>創業計画・融資を見据えた<br>「事前整理」無料相談（60分）</h3>
+          <a href="#" class="btn btn-primary btn-lg">無料相談を申し込む</a>
+          <div class="cta-inline-info">
+            <span>予約制</span>
+            <span>来所</span>
+            <span>60分</span>
+            <span>無料</span>
+          </div>
+          <a href="tel:0748-36-2817" class="final-cta-tel">
+            <span class="label">お電話でのご予約</span>
+            <span class="number">0748-36-2817</span>
+            <span class="hours">平日 9:00〜18:00</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-content">
+      <div class="footer-main">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <img src="sawada-logo.png" alt="澤田匡央税理士事務所" style="height: 48px; width: auto;">
+          </div>
+          <ul class="footer-details">
+            <li>
+              <span class="label">代表</span>
+              <span class="value">澤田 匡央（さわだ ただちか）</span>
+            </li>
+            <li>
+              <span class="label">所在地</span>
+              <span class="value">〒523-0894<br>滋賀県近江八幡市中村町 20-15<br>コルージャビル 3F</span>
+            </li>
+            <li>
+              <span class="label">TEL</span>
+              <span class="value"><a href="tel:0748-36-2817">0748-36-2817</a></span>
+            </li>
+            <li>
+              <span class="label">営業時間</span>
+              <span class="value">平日 9:00〜18:00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.8!2d136.0976!3d35.1289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5ruL6LOA55yM6L-R5rGf5YWr5bmh5biC5Lit5p2R55S6MjAtMTU!5e0!3m2!1sja!2sjp!4v1600000000000"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 澤田匡央税理士事務所 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Fixed CTA -->
+  <div class="mobile-cta">
+    <a href="#form" class="btn btn-primary">無料相談を申し込む</a>
+    <a href="tel:0748-36-2817" class="btn btn-secondary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+  </div>
+
+  <script>
+    // Fixed header visibility on scroll
+    const fixedHeader = document.getElementById('fixedHeader');
+    const heroSection = document.getElementById('hero');
+
+    const headerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          fixedHeader.classList.remove('visible');
+        } else {
+          fixedHeader.classList.add('visible');
+        }
+      });
+    }, { threshold: 0, rootMargin: '-100px 0px 0px 0px' });
+
+    headerObserver.observe(heroSection);
+
+    // Scroll animations
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    animateElements.forEach(el => scrollObserver.observe(el));
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        faqItems.forEach(i => i.classList.remove('open'));
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = 70;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
