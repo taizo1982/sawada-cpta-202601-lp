@@ -1,10 +1,16 @@
-import officeImage from '../../assets/office-interior.jpg';
+import officeImageAvif from '../../assets/office-interior.avif';
+import officeImageWebp from '../../assets/office-interior.webp';
+import officeImageJpg from '../../assets/office-interior.jpg';
 
 export function FinalCTASection() {
   return (
     <section className="section final-cta" id="final-cta">
       <div className="final-cta-bg">
-        <img src={officeImage} alt="オフィス" />
+        <picture>
+          <source srcSet={officeImageAvif} type="image/avif" />
+          <source srcSet={officeImageWebp} type="image/webp" />
+          <img src={officeImageJpg} alt="オフィス" />
+        </picture>
       </div>
       <div className="container">
         <div className="final-cta-content">
@@ -21,7 +27,7 @@ export function FinalCTASection() {
 
           <div className="final-cta-card animate-on-scroll" id="form">
             <h3>創業計画・融資を見据えた<br />「事前整理」無料相談（60分）</h3>
-            <a href="#" className="btn btn-primary btn-lg">無料相談を申し込む</a>
+            <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg">無料相談を申し込む</a>
             <div className="cta-inline-info">
               <span>予約制</span>
               <span>来所</span>

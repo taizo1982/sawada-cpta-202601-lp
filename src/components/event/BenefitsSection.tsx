@@ -1,4 +1,6 @@
-import expertImage from '../../assets/expert-explanation.jpg';
+import expertImageAvif from '../../assets/expert-explanation.avif';
+import expertImageWebp from '../../assets/expert-explanation.webp';
+import expertImageJpg from '../../assets/expert-explanation.jpg';
 
 export function BenefitsSection() {
   return (
@@ -11,7 +13,11 @@ export function BenefitsSection() {
 
         <div className="benefits-grid">
           <div className="benefits-image animate-on-scroll">
-            <img src={expertImage} alt="税理士との相談" />
+            <picture>
+              <source srcSet={expertImageAvif} type="image/avif" />
+              <source srcSet={expertImageWebp} type="image/webp" />
+              <img src={expertImageJpg} alt="税理士との相談" />
+            </picture>
             <div className="benefits-image-badge">
               <span>創業支援</span>
               <strong>専門家の視点でサポート</strong>

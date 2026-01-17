@@ -1,4 +1,6 @@
-import profileImage from '../../assets/sawada-profile.jpg';
+import profileImageAvif from '../../assets/sawada-profile.avif';
+import profileImageWebp from '../../assets/sawada-profile.webp';
+import profileImageJpg from '../../assets/sawada-profile.jpg';
 
 export function ProfileSection() {
   return (
@@ -13,7 +15,11 @@ export function ProfileSection() {
         <div className="profile-wrapper">
           <div className="profile-image-col animate-on-scroll">
             <div className="profile-main-image">
-              <img src={profileImage} alt="澤田匡央税理士" />
+              <picture>
+                <source srcSet={profileImageAvif} type="image/avif" />
+                <source srcSet={profileImageWebp} type="image/webp" />
+                <img src={profileImageJpg} alt="澤田匡央税理士" />
+              </picture>
             </div>
             <div className="profile-name-card">
               <h3>澤田 匡央</h3>

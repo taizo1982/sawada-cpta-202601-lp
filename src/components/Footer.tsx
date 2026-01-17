@@ -1,4 +1,6 @@
-import sawadaLogo from '../assets/sawada-logo.png';
+import sawadaLogoWhAvif from '../assets/sawada-logo-wh.avif';
+import sawadaLogoWhWebp from '../assets/sawada-logo-wh.webp';
+import sawadaLogoWhPng from '../assets/sawada-logo-wh.png';
 
 export function Footer() {
   return (
@@ -7,7 +9,11 @@ export function Footer() {
         <div className="footer-main">
           <div className="footer-info">
             <div className="footer-logo">
-              <img src={sawadaLogo} alt="澤田匡央税理士事務所" style={{ height: '48px', width: 'auto' }} />
+              <picture>
+                <source srcSet={sawadaLogoWhAvif} type="image/avif" />
+                <source srcSet={sawadaLogoWhWebp} type="image/webp" />
+                <img src={sawadaLogoWhPng} alt="澤田匡央税理士事務所" style={{ height: '48px', width: 'auto' }} />
+              </picture>
             </div>
             <ul className="footer-details">
               <li>

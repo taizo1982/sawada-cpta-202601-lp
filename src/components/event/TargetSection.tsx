@@ -1,4 +1,6 @@
-import entrepreneurImage from '../../assets/entrepreneur-planning.jpg';
+import entrepreneurImageAvif from '../../assets/entrepreneur-planning.avif';
+import entrepreneurImageWebp from '../../assets/entrepreneur-planning.webp';
+import entrepreneurImageJpg from '../../assets/entrepreneur-planning.jpg';
 
 export function TargetSection() {
   return (
@@ -10,7 +12,11 @@ export function TargetSection() {
         </div>
         <div className="target-grid">
           <div className="target-image animate-on-scroll">
-            <img src={entrepreneurImage} alt="創業を考えている方" />
+            <picture>
+              <source srcSet={entrepreneurImageAvif} type="image/avif" />
+              <source srcSet={entrepreneurImageWebp} type="image/webp" />
+              <img src={entrepreneurImageJpg} alt="創業を考えている方" />
+            </picture>
           </div>
           <div className="target-content animate-on-scroll">
             <ul className="target-list">

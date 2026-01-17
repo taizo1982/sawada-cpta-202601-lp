@@ -1,16 +1,28 @@
-import heroImage from '../../assets/hero-consultation.png';
-import heroLogo from '../../assets/hero-logo.png';
+import heroImageAvif from '../../assets/hero-consultation.avif';
+import heroImageWebp from '../../assets/hero-consultation.webp';
+import heroImageJpg from '../../assets/hero-consultation.jpg';
+import heroLogoAvif from '../../assets/hero-logo.avif';
+import heroLogoWebp from '../../assets/hero-logo.webp';
+import heroLogoPng from '../../assets/hero-logo.png';
 
 export function EventHero() {
   return (
     <section className="hero" id="hero">
       <div className="hero-bg">
-        <img src={heroImage} alt="相談風景" />
+        <picture>
+          <source srcSet={heroImageAvif} type="image/avif" />
+          <source srcSet={heroImageWebp} type="image/webp" />
+          <img src={heroImageJpg} alt="相談風景" />
+        </picture>
       </div>
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-vertical-title">
-            <img src={heroLogo} alt="澤田匡央税理士事務所" className="hero-vertical-logo" />
+            <picture>
+              <source srcSet={heroLogoAvif} type="image/avif" />
+              <source srcSet={heroLogoWebp} type="image/webp" />
+              <img src={heroLogoPng} alt="澤田匡央税理士事務所" className="hero-vertical-logo" />
+            </picture>
           </div>
           <div className="hero-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -88,7 +100,7 @@ export function EventHero() {
               <span className="feature-value">代表税理士 澤田</span>
             </li>
           </ul>
-          <a href="#form" className="btn btn-primary btn-lg">無料相談を申し込む</a>
+          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg">無料相談を申し込む</a>
           <a href="tel:0748-36-2817" className="hero-card-tel">
             <span>お電話でのご予約</span>
             <span className="tel-number">0748-36-2817</span>

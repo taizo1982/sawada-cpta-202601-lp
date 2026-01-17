@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import sawadaLogo from '../../assets/sawada-logo.png';
+import sawadaLogoAvif from '../../assets/sawada-logo.avif';
+import sawadaLogoWebp from '../../assets/sawada-logo.webp';
+import sawadaLogoPng from '../../assets/sawada-logo.png';
 
 export function EventHeader() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +27,11 @@ export function EventHeader() {
     <header className={`fixed-header ${isVisible ? 'visible' : ''}`} id="fixedHeader">
       <div className="header-inner">
         <div className="header-logo">
-          <img src={sawadaLogo} alt="澤田匡央税理士事務所" style={{ height: '36px', width: 'auto' }} />
+          <picture>
+            <source srcSet={sawadaLogoAvif} type="image/avif" />
+            <source srcSet={sawadaLogoWebp} type="image/webp" />
+            <img src={sawadaLogoPng} alt="澤田匡央税理士事務所" style={{ height: '36px', width: 'auto' }} />
+          </picture>
         </div>
         <div className="header-actions">
           <a href="tel:0748-36-2817" className="header-tel">
@@ -34,7 +40,7 @@ export function EventHeader() {
             </svg>
             <span>0748-36-2817</span>
           </a>
-          <a href="#form" className="btn btn-primary btn-sm">無料相談を申し込む</a>
+          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-sm">無料相談を申し込む</a>
         </div>
       </div>
     </header>

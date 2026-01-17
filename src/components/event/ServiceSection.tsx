@@ -1,3 +1,7 @@
+import serviceImageAvif from '../../assets/service-image.avif';
+import serviceImageWebp from '../../assets/service-image.webp';
+import serviceImagePng from '../../assets/service-image.png';
+
 export function ServiceSection() {
   return (
     <section className="section" id="service">
@@ -9,7 +13,11 @@ export function ServiceSection() {
         </div>
 
         <div className="service-hero animate-on-scroll">
-          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=1200&q=80" alt="相談の様子" />
+          <picture>
+            <source srcSet={serviceImageAvif} type="image/avif" />
+            <source srcSet={serviceImageWebp} type="image/webp" />
+            <img src={serviceImagePng} alt="相談の様子" />
+          </picture>
           <div className="service-hero-overlay">
             <div className="service-hero-text">
               <h3>本相談は、<span className="emphasis">「事前整理」</span>に特化しています</h3>
@@ -65,7 +73,7 @@ export function ServiceSection() {
         </div>
 
         <div className="cta-inline animate-on-scroll">
-          <a href="#form" className="btn btn-primary btn-lg">無料相談を申し込む</a>
+          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg">無料相談を申し込む</a>
           <div className="cta-inline-info">
             <span>予約制</span>
             <span>来所</span>
