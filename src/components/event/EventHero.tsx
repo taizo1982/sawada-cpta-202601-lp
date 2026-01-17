@@ -1,72 +1,100 @@
-import { Button } from "../ui/button";
-import { PARTY_DETAIL_URL } from "../../constants";
-import heroImageAvif from "../../assets/2927b6ac43f0939a85bca96267f3fa2a187c2bd2.avif";
-import heroImageWebp from "../../assets/2927b6ac43f0939a85bca96267f3fa2a187c2bd2.webp";
-import heroImagePng from "../../assets/2927b6ac43f0939a85bca96267f3fa2a187c2bd2.png";
-import titleImageAvif from "../../assets/c29107eecdbb8d2af774d123974ff110ca535933.avif";
-import titleImageWebp from "../../assets/c29107eecdbb8d2af774d123974ff110ca535933.webp";
-import titleImagePng from "../../assets/c29107eecdbb8d2af774d123974ff110ca535933.png";
+import heroImage from '../../assets/hero-consultation.png';
+import heroLogo from '../../assets/hero-logo.png';
 
 export function EventHero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <picture>
-          <source srcSet={heroImageAvif} type="image/avif" />
-          <source srcSet={heroImageWebp} type="image/webp" />
-          <img 
-            src={heroImagePng}
-            alt="列車で出会うカップル"
-            className="w-full h-full object-cover object-top"
-          />
-        </picture>
+    <section className="hero" id="hero">
+      <div className="hero-bg">
+        <img src={heroImage} alt="相談風景" />
       </div>
+      <div className="hero-container">
+        <div className="hero-content">
+          <div className="hero-vertical-title">
+            <img src={heroLogo} alt="澤田匡央税理士事務所" className="hero-vertical-logo" />
+          </div>
+          <div className="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+            創業無料相談（予約制）
+          </div>
+          <h1 className="hero-title">
+            創業計画・融資を見据えた<br />
+            <span className="highlight">「事前整理」</span>無料個別相談
+          </h1>
+          <p className="hero-lead">
+            事業は決めた。<br />
+            でも、計画と数字に不安がある方へ。
+          </p>
+          <ul className="hero-concerns">
+            {[
+              '創業は決めたが、この考えで進んでいいのか誰かに聞きたい',
+              '創業計画を立てたいが、進め方に迷っている',
+              '融資を検討しているが、数字に自信がない',
+              '金融機関にどう見られるのかが不安',
+            ].map((concern, index) => (
+              <li key={index}>
+                <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 11 12 14 22 4"></polyline>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+                {concern}
+              </li>
+            ))}
+          </ul>
+          <p className="hero-message">
+            その状態のままで、ご相談ください。
+          </p>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 flex flex-col justify-end min-h-[90vh]">
-        <div className="max-w-6xl mx-auto w-full">
-          {/* Desktop: Horizontal Layout, Mobile: Vertical Layout */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-12">
-            {/* Left: Title */}
-            <div className="flex-1 text-center lg:text-left">
-              <div>
-                <picture>
-                  <source srcSet={titleImageAvif} type="image/avif" />
-                  <source srcSet={titleImageWebp} type="image/webp" />
-                  <img 
-                    src={titleImagePng}
-                    alt="恋するクリスマストレイン"
-                    className="w-full max-w-md lg:max-w-2xl mx-auto lg:mx-0"
-                  />
-                </picture>
-              </div>
+          <div className="trust-badges">
+            <div className="trust-badge">
+              <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              無理な勧誘は一切ありません
             </div>
-
-            {/* Right: CTA and Event Info */}
-            <div className="flex-shrink-0 text-center lg:text-right flex flex-col items-center lg:items-end gap-6">
-              {/* CTA Button */}
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-10 py-7 rounded-full shadow-2xl text-xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105"
-                asChild
-              >
-                <a href={PARTY_DETAIL_URL}>
-                  パーティーに参加する
-                </a>
-              </Button>
-
-              {/* Event Info Badge */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl px-8 py-4 shadow-lg">
-                <p className="text-sm text-foreground/60 mb-1">2025年12月21日（日）開催</p>
-                <p className="text-lg">参加費：男性6,000円／女性3,000円</p>
-              </div>
+            <div className="trust-badge">
+              <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              守秘義務により厳重管理
             </div>
           </div>
         </div>
+
+        <div className="hero-card">
+          <div className="hero-card-header">
+            <h2 className="hero-card-title">創業無料相談</h2>
+            <p className="hero-card-subtitle">初回60分・代表税理士が直接対応</p>
+          </div>
+          <ul className="hero-card-features">
+            <li>
+              <span className="feature-label">相談時間</span>
+              <span className="feature-value">60分</span>
+            </li>
+            <li>
+              <span className="feature-label">相談費用</span>
+              <span className="feature-value free">無料</span>
+            </li>
+            <li>
+              <span className="feature-label">相談形式</span>
+              <span className="feature-value">来所・個別相談</span>
+            </li>
+            <li>
+              <span className="feature-label">担当</span>
+              <span className="feature-value">代表税理士 澤田</span>
+            </li>
+          </ul>
+          <a href="#form" className="btn btn-primary btn-lg">無料相談を申し込む</a>
+          <a href="tel:0748-36-2817" className="hero-card-tel">
+            <span>お電話でのご予約</span>
+            <span className="tel-number">0748-36-2817</span>
+          </a>
+        </div>
       </div>
-
-
     </section>
   );
 }

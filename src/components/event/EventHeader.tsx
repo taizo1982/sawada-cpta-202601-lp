@@ -1,78 +1,40 @@
-import { Button } from "../ui/button";
-import { Snowflake } from "lucide-react";
-import { useState, useEffect } from "react";
-import { PARTY_DETAIL_URL } from "../../constants";
-import logoAvif from "../../assets/b29d72b932bc03012c283d26e62b9d662d1c5861.avif";
-import logoWebp from "../../assets/b29d72b932bc03012c283d26e62b9d662d1c5861.webp";
-import logoPng from "../../assets/b29d72b932bc03012c283d26e62b9d662d1c5861.png";
+import { useEffect, useState } from 'react';
+import sawadaLogo from '../../assets/sawada-logo.png';
 
 export function EventHeader() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // スクロール位置が50px以下の場合は常に表示
-      if (currentScrollY <= 50) {
-        setIsVisible(true);
-      } else {
-        // 上方向にスクロール（逆スクロール）で表示
-        if (currentScrollY < lastScrollY) {
-          setIsVisible(true);
-        } 
-        // 下方向にスクロールで非表示
-        else if (currentScrollY > lastScrollY) {
-          setIsVisible(false);
-        }
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
+    const heroSection = document.getElementById('hero');
+    if (!heroSection) return;
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(!entry.isIntersecting);
+        });
+      },
+      { threshold: 0, rootMargin: '-100px 0px 0px 0px' }
+    );
+
+    observer.observe(heroSection);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b-2 border-gradient-to-r from-primary to-accent transition-transform duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <picture>
-              <source srcSet={logoAvif} type="image/avif" />
-              <source srcSet={logoWebp} type="image/webp" />
-              <img 
-                src={logoPng} 
-                alt="I be connect" 
-                className="h-4 md:h-10 object-contain"
-                style={{ aspectRatio: 'auto' }}
-              />
-            </picture>
-            <div className="hidden sm:flex items-center gap-2 text-sm text-foreground/60">
-              <Snowflake className="w-4 h-4 text-primary" />
-              <span>冬限定イベント</span>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <Button
-            className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg hover:shadow-red-500/30 transition-all"
-            asChild
-          >
-            <a href={PARTY_DETAIL_URL}>
-              パーティーに参加する
-            </a>
-          </Button>
+    <header className={`fixed-header ${isVisible ? 'visible' : ''}`} id="fixedHeader">
+      <div className="header-inner">
+        <div className="header-logo">
+          <img src={sawadaLogo} alt="澤田匡央税理士事務所" style={{ height: '36px', width: 'auto' }} />
+        </div>
+        <div className="header-actions">
+          <a href="tel:0748-36-2817" className="header-tel">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>0748-36-2817</span>
+          </a>
+          <a href="#form" className="btn btn-primary btn-sm">無料相談を申し込む</a>
         </div>
       </div>
     </header>

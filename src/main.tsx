@@ -3,6 +3,7 @@ import React from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
+import "./styles/globals.css";
 
 const container = document.getElementById("root");
 
