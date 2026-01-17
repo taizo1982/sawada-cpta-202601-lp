@@ -323,7 +323,7 @@
 
     @media (max-width: 1023px) {
       .hero-bg img {
-        object-position: -20px center;
+        object-position: -60px center;
       }
     }
 
@@ -821,6 +821,7 @@
     @media (min-width: 768px) {
       .service-hero img {
         height: 360px;
+        object-position: center top;
       }
     }
 
