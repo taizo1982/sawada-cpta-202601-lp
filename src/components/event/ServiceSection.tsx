@@ -1,6 +1,6 @@
 import serviceImageAvif from '../../assets/service-image.avif';
 import serviceImageWebp from '../../assets/service-image.webp';
-import serviceImagePng from '../../assets/service-image.png';
+import serviceImageJpg from '../../assets/service-image.jpg';
 
 export function ServiceSection() {
   return (
@@ -16,7 +16,7 @@ export function ServiceSection() {
           <picture>
             <source srcSet={serviceImageAvif} type="image/avif" />
             <source srcSet={serviceImageWebp} type="image/webp" />
-            <img src={serviceImagePng} alt="相談の様子" />
+            <img src={serviceImageJpg} alt="相談の様子" />
           </picture>
           <div className="service-hero-overlay">
             <div className="service-hero-text">
