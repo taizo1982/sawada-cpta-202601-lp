@@ -1246,6 +1246,13 @@
       position: relative;
     }
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .profile-image-col {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
     .profile-main-image {
       border-radius: 8px;
       overflow: hidden;
