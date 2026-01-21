@@ -41,6 +41,9 @@ const createGoogleTagBlock = (gaMeasurementId, gaAdsId) => {
     lines.push(`  gtag('config', '${gaAdsId}');`);
   }
 
+  // NOTE: Google Adsのコンバージョンはお問い合わせThanksページで計測
+  // LPではグローバルタグのみ（リマーケティング用）
+
   lines.push("</script>");
 
   return [loaderTag, lines.join("\n")].join("\n");
@@ -78,6 +81,11 @@ const createMetaPixelBlock = (metaPixelId, metaAppId) => {
   }
 
   script.push("  fbq('track', 'PageView');");
+  // CVボタンクリック時のトラッキング（ViewContent）
+  // NOTE: Leadはお問い合わせThanksページで計測
+  script.push("  window.trackMetaPixelConversion = function() {");
+  script.push("    fbq('track', 'ViewContent', { content_name: 'contact_button_click' });");
+  script.push("  };");
   script.push("</script>");
 
   const noscript = `<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=${encodeURIComponent(metaPixelId)}&ev=PageView&noscript=1"/></noscript>`;
@@ -101,9 +109,21 @@ const injectAnalytics = async () => {
   const metaPixelId = sanitize(env.VITE_META_PIXEL_ID);
   const metaAppId = sanitize(env.VITE_META_APP_ID);
 
+  // 統合トラッキング関数（Meta Pixelのみ、Google Adsはグローバルタグのみ）
+  const createTrackConversionBlock = () => {
+    return `<script>
+  window.trackConversion = function() {
+    if (typeof window.trackMetaPixelConversion === 'function') {
+      window.trackMetaPixelConversion();
+    }
+  };
+</script>`;
+  };
+
   const blocks = [
     createGoogleTagBlock(gaMeasurementId, gaAdsId),
     createMetaPixelBlock(metaPixelId, metaAppId),
+    createTrackConversionBlock(),
   ].filter(Boolean);
 
   let html = await fs.readFile(buildIndexPath, "utf-8");

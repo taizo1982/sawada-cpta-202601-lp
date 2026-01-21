@@ -100,7 +100,7 @@ export function EventHero() {
               <span className="feature-value">代表税理士 澤田</span>
             </li>
           </ul>
-          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg">無料相談を申し込む</a>
+          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg" onClick={() => (window as any).trackConversion?.()}>無料相談を申し込む</a>
           <a href="tel:0748-36-2817" className="hero-card-tel">
             <span>お電話でのご予約</span>
             <span className="tel-number">0748-36-2817</span>

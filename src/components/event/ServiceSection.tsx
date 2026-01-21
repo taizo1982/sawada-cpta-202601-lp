@@ -73,7 +73,7 @@ export function ServiceSection() {
         </div>
 
         <div className="cta-inline animate-on-scroll">
-          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg">無料相談を申し込む</a>
+          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg" onClick={() => (window as any).trackConversion?.()}>無料相談を申し込む</a>
           <div className="cta-inline-info">
             <span>予約制</span>
             <span>来所</span>

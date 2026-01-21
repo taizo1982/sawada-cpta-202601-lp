@@ -40,7 +40,7 @@ export function EventHeader() {
             </svg>
             <span>0748-36-2817</span>
           </a>
-          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-sm">無料相談を申し込む</a>
+          <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-sm" onClick={() => (window as any).trackConversion?.()}>無料相談を申し込む</a>
         </div>
       </div>
     </header>

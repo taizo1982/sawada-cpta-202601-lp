@@ -27,7 +27,7 @@ export function FinalCTASection() {
 
           <div className="final-cta-card animate-on-scroll" id="form">
             <h3>創業計画・融資を見据えた<br />「事前整理」無料相談（60分）</h3>
-            <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg">無料相談を申し込む</a>
+            <a href="https://sawada-cpta.com/contact/" className="btn btn-primary btn-lg" onClick={() => (window as any).trackConversion?.()}>無料相談を申し込む</a>
             <div className="cta-inline-info">
               <span>予約制</span>
               <span>来所</span>
