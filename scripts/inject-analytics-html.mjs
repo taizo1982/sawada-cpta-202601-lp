@@ -93,6 +93,20 @@ const createMetaPixelBlock = (metaPixelId, metaAppId) => {
   return [script.join("\n"), noscript].join("\n");
 };
 
+const createClarityBlock = (clarityProjectId) => {
+  if (!clarityProjectId) {
+    return "";
+  }
+
+  return `<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "${clarityProjectId}");
+</script>`;
+};
+
 const injectAnalytics = async () => {
   try {
     await fs.access(buildIndexPath);
@@ -108,6 +122,7 @@ const injectAnalytics = async () => {
   const gaAdsId = sanitize(env.VITE_GA_ADS_ID);
   const metaPixelId = sanitize(env.VITE_META_PIXEL_ID);
   const metaAppId = sanitize(env.VITE_META_APP_ID);
+  const clarityProjectId = sanitize(env.CLARITY_PROJECT_ID);
 
   // 統合トラッキング関数（Meta Pixelのみ、Google Adsはグローバルタグのみ）
   const createTrackConversionBlock = () => {
@@ -123,6 +138,7 @@ const injectAnalytics = async () => {
   const blocks = [
     createGoogleTagBlock(gaMeasurementId, gaAdsId),
     createMetaPixelBlock(metaPixelId, metaAppId),
+    createClarityBlock(clarityProjectId),
     createTrackConversionBlock(),
   ].filter(Boolean);
 
